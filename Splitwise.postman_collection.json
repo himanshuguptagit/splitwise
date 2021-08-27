@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "383c483e-4e15-4eec-ac7a-23579c5a70e3",
+		"name": "Splitwise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Create a user"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"himanshu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/expenses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Mc Donalds\",\r\n    \"total\": 100,\r\n    \"userExpenses\": [\r\n        {\r\n            \"userId\": 1,\r\n            \"amount\": 80,\r\n            \"expectedAmount\": 50\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"amount\": 20,\r\n            \"expectedAmount\": 50\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/expenses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"expenses"
+					]
+				},
+				"description": "Create an expense"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/expenses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Dominos\",\r\n    \"total\": 300,\r\n    \"userExpenses\": [\r\n        {\r\n            \"userId\": 1,\r\n            \"amount\": 120,\r\n            \"expectedAmount\": 100\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"amount\": 110,\r\n            \"expectedAmount\": 100\r\n        },\r\n        {\r\n            \"userId\": 3,\r\n            \"amount\": 70,\r\n            \"expectedAmount\": 100\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/expenses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"expenses"
+					]
+				},
+				"description": "Get all expenses"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/expenses/user/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Dominos\",\r\n    \"total\": 300,\r\n    \"userExpenses\": [\r\n        {\r\n            \"userId\": 1,\r\n            \"amount\": 120,\r\n            \"expectedAmount\": 100\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"amount\": 110,\r\n            \"expectedAmount\": 100\r\n        },\r\n        {\r\n            \"userId\": 3,\r\n            \"amount\": 70,\r\n            \"expectedAmount\": 100\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/expenses/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"expenses",
+						"user",
+						"1"
+					]
+				},
+				"description": "Get expenses of a user by userId"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/settlements/recommendations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payerId\": 2,\r\n    \"receiverId\": 1,\r\n    \"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/settlements/recommendations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settlements",
+						"recommendations"
+					]
+				},
+				"description": "Get recommended way to settle debts in a minimum cashflow way."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/settlements/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payerId\": 2,\r\n    \"receiverId\": 1,\r\n    \"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/settlements/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settlements",
+						""
+					]
+				},
+				"description": "Create a transaction when a user pay some other user directly"
+			},
+			"response": []
+		}
+	]
+}
